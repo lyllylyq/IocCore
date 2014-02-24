@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping   xmlns="urn:nhibernate-mapping-2.2" assembly="NHibernateCacheTest" namespace="NHibernateCacheTest">
+  <class name ="NHibernateCacheTest.CITY,NHibernateCacheTest" table="CITY" >
+	<!---->
+    <id name="SID" type="Int32" column="SID">
+      <generator class="sequence">
+        <param name="sequence">SEQ_PK_CITY</param>
+      </generator>
+    </id>				
+
+	<!---->
+	<property name="NAME" type="String" column="NAME" length="25"/>
+
+	<!---->
+	<property name="PROVINCEID" type="Int32" column="PROVINCEID" />
+
+	<!---->
+	<property name="COUNTRYID" type="Int32" column="COUNTRYID" />
+
+	<!---->
+	<property name="LONGITUDE" type="Decimal" column="LONGITUDE"/>					
+
+	<!---->
+	<property name="LATITUDE" type="Decimal" column="LATITUDE"/>					
+					
+  </class>
+</hibernate-mapping>	
+
+<!-- 注意：生成完成后，需要将它的“文件属性->生成操作”选项，改为“嵌入的资源” -->
+	
+	
+

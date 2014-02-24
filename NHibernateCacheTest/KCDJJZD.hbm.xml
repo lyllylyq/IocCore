@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping   xmlns="urn:nhibernate-mapping-2.2" assembly="NHibernateCacheTest" namespace="NHibernateCacheTest">
+  <class name ="NHibernateCacheTest.KCDJJZD,NHibernateCacheTest" table="KCDJJZD" >
+	<!---->
+    <id name="BSM" type="Int32" column="BSM">
+      <generator class="sequence">
+        <param name="sequence">SEQ_KCDJJZD_KEY</param>
+      </generator>
+    </id>
+	<!---->
+	<property name="DKBSM" type="Int32" column="DKBSM"/>					
+
+	<!---->
+	<property name="DKBH" type="String" column="DKBH" length="25"/>
+
+	<!---->
+	<property name="QH" type="String" column="QH" length="25"/>
+
+	<!---->
+	<property name="JZDH" type="String" column="JZDH" length="25"/>
+
+	<!---->
+	<property name="XZB" type="Decimal" column="XZB"/>					
+
+	<!---->
+	<property name="YZB" type="Decimal" column="YZB"/>					
+
+	<!---->
+	<property name="WKID" type="Decimal" column="WKID"/>					
+  </class>
+</hibernate-mapping>	
+
+<!-- 注意：生成完成后，需要将它的“文件属性->生成操作”选项，改为“嵌入的资源” -->
+	
+	
+
