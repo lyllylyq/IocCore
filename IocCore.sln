@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IocPlugin.IocNHibernate.Ora
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernateCacheTest", "NHibernateCacheTest\NHibernateCacheTest.csproj", "{FA5F1A85-A0E6-4698-B4D7-DB712DF6CE3C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IocCoreTest", "IocCoreTest\IocCoreTest.csproj", "{635A6316-58A2-4606-9ABC-EF88DB25BBDC}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = AspectDNGTest.vsmdi
@@ -108,6 +110,16 @@ Global
 		{FA5F1A85-A0E6-4698-B4D7-DB712DF6CE3C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{FA5F1A85-A0E6-4698-B4D7-DB712DF6CE3C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{FA5F1A85-A0E6-4698-B4D7-DB712DF6CE3C}.Release|x86.ActiveCfg = Release|Any CPU
+		{635A6316-58A2-4606-9ABC-EF88DB25BBDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{635A6316-58A2-4606-9ABC-EF88DB25BBDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{635A6316-58A2-4606-9ABC-EF88DB25BBDC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{635A6316-58A2-4606-9ABC-EF88DB25BBDC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{635A6316-58A2-4606-9ABC-EF88DB25BBDC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{635A6316-58A2-4606-9ABC-EF88DB25BBDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{635A6316-58A2-4606-9ABC-EF88DB25BBDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{635A6316-58A2-4606-9ABC-EF88DB25BBDC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{635A6316-58A2-4606-9ABC-EF88DB25BBDC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{635A6316-58A2-4606-9ABC-EF88DB25BBDC}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

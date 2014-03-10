@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D6A6C807-C201-4E39-9338-FB924762384A}</ProjectGuid>
+    <ProjectGuid>{635A6316-58A2-4606-9ABC-EF88DB25BBDC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IocPlugin.IocDbOp.OracleOp</RootNamespace>
-    <AssemblyName>IocPlugin.IocDbOp.OracleOp</AssemblyName>
+    <RootNamespace>IocCoreTest</RootNamespace>
+    <AssemblyName>IocCoreTest</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,11 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Oracle.DataAccess, Version=4.121.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64" />
-    <Reference Include="Oracle.Web, Version=4.121.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64" />
+    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,15 +44,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OracleCacheDependencyWrapper.cs" />
-    <Compile Include="OracleOp.cs" />
+    <Compile Include="IocDbOp\OracleSingletonOpTest.cs" />
+    <Compile Include="IocDbOp\OracleOpTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="OracleSingletonOp.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\IocCore\IocCore.csproj">
+    <Content Include="ClientBin\hibernateOracle.cfg.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ClientBin\IocConfig.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ClientBin\log4net.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IocCore\IocCore.csproj">
       <Project>{3119357F-BF7E-4DF6-BB8C-D400D7810845}</Project>
       <Name>IocCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IocPlugin\IocDbOp\IocPlugin.IocDbOp.OracleOp\IocPlugin.IocDbOp.OracleOp.csproj">
+      <Project>{D6A6C807-C201-4E39-9338-FB924762384A}</Project>
+      <Name>IocPlugin.IocDbOp.OracleOp</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
