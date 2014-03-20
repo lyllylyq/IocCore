@@ -31,12 +31,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NHibernate">
+      <HintPath>..\dll\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\dll\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,11 +48,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IocPlugin\Helper\CallbackDef.cs" />
+    <Compile Include="IocPlugin\Helper\CITY.cs" />
     <Compile Include="IocDbOp\OracleSingletonOpTest.cs" />
     <Compile Include="IocDbOp\OracleOpTest.cs" />
+    <Compile Include="IocPlugin\OracleNHibernateTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="IocPlugin\Helper\CITY.hbm.xml" />
     <Content Include="ClientBin\hibernateOracle.cfg.xml">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -70,6 +78,10 @@
     <ProjectReference Include="..\IocPlugin\IocDbOp\IocPlugin.IocDbOp.OracleOp\IocPlugin.IocDbOp.OracleOp.csproj">
       <Project>{D6A6C807-C201-4E39-9338-FB924762384A}</Project>
       <Name>IocPlugin.IocDbOp.OracleOp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IocPlugin\IocNHibernate\IocPlugin.IocNHibernate.OracleNHibernate\IocPlugin.IocNHibernate.OracleNHibernate.csproj">
+      <Project>{BB4C9C74-C8A6-4A44-B77A-B0BCA4E80835}</Project>
+      <Name>IocPlugin.IocNHibernate.OracleNHibernate</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
